@@ -1,8 +1,8 @@
 phonebook = {"Chris": "555-111", 
             "Katie": "555−2222",
             "Joanne": "555-333"}
-
-"""
+            
+""
 print()
 print("*****  start section 1 - print dictionary ********")
 print()
