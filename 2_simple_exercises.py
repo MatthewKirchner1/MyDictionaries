@@ -17,8 +17,7 @@ dict = {
     "son's weight": 25,
 }
 
-for key, value in dict.items():
-    print(key, value)
+print(dict)
 
 dict["son's height"] += 2
 
@@ -33,8 +32,9 @@ sampleDict = {
     "emp3": {"name": "Brad", "salary": 6500},
 }
 
-for sampleDict["name"], Brad in sampleDict.items():
-    sampleDict["salary"] = 8500
+print(sampleDict)
+
+sampleDict["emp3"]["salary"] = 8500
 
 print(sampleDict)
 
@@ -48,3 +48,9 @@ dict = {
     "teacher": "Socrates",
     "student": "Aristotle",
 }
+
+print(dict)
+
+dict["work"] = "Apology", "Phaedo", "Republic", "Symposium"
+
+print(dict)
