@@ -23,7 +23,6 @@ dict["son's height"] += 2
 
 print(dict)
 
-
 # 3) Given a Python dictionary, Change Brad’s salary to 8500
 
 sampleDict = {
