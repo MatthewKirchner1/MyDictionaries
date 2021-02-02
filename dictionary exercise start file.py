@@ -74,7 +74,7 @@ def create_deck():
         "King of Diamonds": 10,
     }
 
-    # Return the deck.
+    # Return the deck
 
 
 # The deal_cards function deals a specified number of cards
