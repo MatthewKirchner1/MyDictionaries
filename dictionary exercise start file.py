@@ -19,6 +19,7 @@ def main():
 def create_deck():
     # Create a dictionary with each card and its value
     # stored as key-value pairs.
+
     deck = {
         "Ace of Spades": 1,
         "2 of Spades": 2,
@@ -83,7 +84,7 @@ def create_deck():
 # from the deck.
 
 
-def deal_cards(deck, number):
+def deal_cards(deck, num_cards):
     # Initialize an accumulator for the hand value.
 
     hand_value = 0
@@ -91,18 +92,20 @@ def deal_cards(deck, number):
     # Make sure the number of cards to deal is not
     # greater than the number of cards in the deck.
 
-    while number > len(deck):
+    import random
+
+    while num_cards < len(deck) and num_cards > 0:
 
         # Deal the cards and accumulate their values.
 
-        deck.popitem()
-        number -= 1
-        hand_value += deck[key]
-        print(key)
+        k = random.choice(list(deck.keys()))
+        num_cards -= 1
+        hand_value += deck[k]
+        print(k)
 
     # Display the value of the hand.
 
-    print("Value of this hand: " + hand_value)
+    print("Value of this hand: ", hand_value)
 
 
 # Call the main function.
