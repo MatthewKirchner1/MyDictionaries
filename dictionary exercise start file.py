@@ -1,4 +1,5 @@
 # This program uses a dictionary as a deck of cards.
+import random
 
 
 def main():
@@ -91,10 +92,10 @@ def deal_cards(deck, num_cards):
 
     # Make sure the number of cards to deal is not
     # greater than the number of cards in the deck.
-
-    import random
-
-    while num_cards < len(deck) and num_cards > 0:
+    if num_cards > len(deck):
+        num_cards = len(deck)
+"""
+    while num_cards <= len(deck) and num_cards > 0:
 
         # Deal the cards and accumulate their values.
 
@@ -103,10 +104,20 @@ def deal_cards(deck, num_cards):
         hand_value += deck[k]
         print(k)
 
+        del deck[k]
+"""
+    for count in range(num_cards):
+        card = random.choice(list.deck())
+        value = deck[card]
+
+        print(card)
+
+        hand_value += value
+        del deck[card]
+
     # Display the value of the hand.
 
     print("Value of this hand: ", hand_value)
-
 
 # Call the main function.
 main()
