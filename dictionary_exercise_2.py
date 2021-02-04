@@ -23,9 +23,26 @@ for year in range(1903, 2009):
     else:
         world_series_winners_by_yr[year] = winners_list[i]
         i += 1
-
+195
 # Create dictionary for winner frequency
 world_series_winners_by_freq = {}
 
 for x in distinct_winners_list:
-    world_series_winners_by_freq[x] = distinct_winners_list.count(x)
+    world_series_winners_by_freq[x] = winners_list.count(x)
+
+# Get input from user
+user_yr = int(input("Enter a year from 1903-2009: "))
+
+# Search dictionaries and present data to user
+winner_in_user_yr = world_series_winners_by_yr[user_yr]
+freg_winner_in_user_ur = world_series_winners_by_freq[winner_in_user_yr]
+
+# Display output
+print("World Series winner in " + str(user_yr) + ": " + winner_in_user_yr)
+print(
+    "The "
+    + winner_in_user_yr
+    + " won the world series "
+    + str(freg_winner_in_user_ur)
+    + " times from 1903-2009."
+)
