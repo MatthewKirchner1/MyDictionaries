@@ -75,3 +75,19 @@ for element in infile_str:
 print(outfile_str)
 
 outfile.write(outfile_str)
+
+##Part2
+
+words_to_count = ["Father", "God", "Christ", "Spirit", "life", "man"]
+john_infile = open("book of John text.txt", "r")
+john_str = john_infile.read()
+
+john_words = john_str.split()
+
+john_words_freqs = {}
+
+for x in words_to_count:
+    freq = john_words.count(x)
+    john_words_freqs[x] = freq
+
+print(john_words_freqs)
